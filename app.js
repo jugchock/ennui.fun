@@ -6,4 +6,9 @@ app.get('/', (req, res) => {
 	res.send('Hello World!');
 });
 
+app.get('/teapot', (req, res) => {
+	res.set('X-teapot', 'I\'m a teapot');
+	res.sendStatus(418);
+});
+
 app.listen(port, () => console.log(`Example app listening on poart ${port}!`));
